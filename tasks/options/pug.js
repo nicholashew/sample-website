@@ -7,7 +7,7 @@ module.exports = {
 		expand: true,
 		cwd: 'src/pug/pages',
 		src: ['**/*.pug'], // src
-		dest: 'deploy', // dist
+		dest: 'dist', // dist
 		ext: '.html'
 	}
 }

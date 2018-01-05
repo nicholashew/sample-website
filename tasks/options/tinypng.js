@@ -6,6 +6,6 @@ module.exports = {
 		expand: true,
 		cwd: 'src/img/',
 		src: ['*.gif','*.jpg','*.png'], // src
-		dest: 'deploy/assets/img/', // dist
+		dest: 'dist/assets/img/', // dist
 	}
 }

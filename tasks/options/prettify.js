@@ -5,9 +5,9 @@ module.exports = {
 	},
 	files: {
 		expand: true,
-		cwd: 'deploy',
+		cwd: 'dist',
 		src: ['**/*.html'],	// src
-		dest: 'deploy',	// dist
+		dest: 'dist',	// dist
 		ext: '.html'
 	}
 }

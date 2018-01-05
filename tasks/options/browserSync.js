@@ -1,22 +1,22 @@
 module.exports = {
 	bsFiles: {
 		src: [
-			'deploy/*.html', 'deploy/*/*.html',
-			'deploy/assets/css/*.css',
-			'deploy/assets/js/*.js',
-			'deploy/assets/img/*.jpg', 'deploy/assets/img/*.jpeg', 'deploy/assets/img/*.gif', 'deploy/assets/img/*.png', 'deploy/assets/img/*.svg',
-			'deploy/assets/img/*/*.jpg', 'deploy/assets/img/*/*.jpeg', 'deploy/assets/img/*/*.gif', 'deploy/assets/img/*/*.png', 'deploy/assets/img/*/*.svg',
-			'deploy/assets/img/*/*/*.jpg', 'deploy/assets/img/*/*/*.jpeg', 'deploy/assets/img/*/*/*.gif', 'deploy/assets/img/*/*/*.png', 'deploy/assets/img/*/*/*.svg',
-			'deploy/assets/fonts/**', 'deploy/assets/fonts/*/*.eot', 'deploy/assets/fonts/*/*.svg', 'deploy/assets/fonts/*/*.ttf', 'deploy/assets/fonts/*/*.woff', 'deploy/assets/fonts/*/*.woff2',
-			'deploy/assets/pdf/*.pdf',
-			'deploy/assets/js/vendor/*.js'
+			'dist/*.html', 'dist/*/*.html',
+			'dist/assets/css/*.css',
+			'dist/assets/js/*.js',
+			'dist/assets/img/*.jpg', 'dist/assets/img/*.jpeg', 'dist/assets/img/*.gif', 'dist/assets/img/*.png', 'dist/assets/img/*.svg',
+			'dist/assets/img/*/*.jpg', 'dist/assets/img/*/*.jpeg', 'dist/assets/img/*/*.gif', 'dist/assets/img/*/*.png', 'dist/assets/img/*/*.svg',
+			'dist/assets/img/*/*/*.jpg', 'dist/assets/img/*/*/*.jpeg', 'dist/assets/img/*/*/*.gif', 'dist/assets/img/*/*/*.png', 'dist/assets/img/*/*/*.svg',
+			'dist/assets/fonts/**', 'dist/assets/fonts/*/*.eot', 'dist/assets/fonts/*/*.svg', 'dist/assets/fonts/*/*.ttf', 'dist/assets/fonts/*/*.woff', 'dist/assets/fonts/*/*.woff2',
+			'dist/assets/pdf/*.pdf',
+			'dist/assets/js/vendor/*.js'
 		]
 	},
 	options: {
 		debugInfo: true,
 		watchTask: true,
 		server: {
-			baseDir: 'deploy'
+			baseDir: 'dist'
 		},
 		port: '4000',
 		ghostMode: {

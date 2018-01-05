@@ -3,8 +3,8 @@ module.exports = {
 		options: {
 			base: './',
 			css: [
-				'deploy/assets/css/plugins.min.css',
-				'deploy/assets/css/style.min.css'
+				'dist/assets/css/plugins.min.css',
+				'dist/assets/css/style.min.css'
 			],
 			dimensions: [{
 				width: 320,
@@ -16,7 +16,7 @@ module.exports = {
 			inline: true,
 			minify: true
 		},
-		src: 'deploy/index.html',
-		dest: 'deploy/index.html'
+		src: 'dist/index.html',
+		dest: 'dist/index.html'
 	}
 }
