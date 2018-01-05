@@ -47,6 +47,15 @@ h6 {
 
 
 
+.navbar-nav a.github-icon:before {
+  content: url("../img/GitHub-Mark-Light-32px.png");
+  width: 26px;
+  height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+}
 
 body {
   background: #fff;
