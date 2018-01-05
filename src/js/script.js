@@ -24,9 +24,9 @@ Functions
 			:: Load Google Font
 			-------------------------------------------------- */
 			loadGoogleFontFN();
+
+			lineitemsEditableFN();			
 	});
-
-
 
 /*	=============================================================================
 	jQuery Window Resize
@@ -97,6 +97,60 @@ Functions
 		function bodyHeightFN(){
 			var bodyHeight = $( 'body' ).height();
 			return bodyHeight;
+		}
+
+	/*	--------------------------------------------------
+		:: Lineitems Editable
+		-------------------------------------------------- */
+		function lineitemsEditableFN() {
+			var container = document.querySelector('table.editable-lineitems > tbody');
+			if (container) {				
+				var rows = container.children;
+
+				// forEach method from https://toddmotto.com/ditch-the-array-foreach-call-nodelist-hack/
+				var nodeListForEach = function (array, callback, scope) {
+				  for (var i = 0; i < array.length; i++) {
+					callback.call(scope, i, array[i]);
+				  }
+				};
+
+				var updateDataIndex = function() {
+					nodeListForEach(rows, function (index, row) {
+						row.querySelector('input.sequence[type=hidden]').value = index + 1;
+						row.dataset.rowPosition = index + 1;
+				  	});
+				};
+
+				var sortableTable = dragula([container]);
+
+				sortableTable.on('dragend', updateDataIndex);
+
+				//Add add new row button
+				var button = document.createElement('button');
+				button.className = 'btn btn-primary';
+				button.innerHTML = 'Add More';
+
+				var insertAfter = function(newElement, targetElement) {
+				    // target is what you want it to go after. Look for this elements parent.
+				    var parent = targetElement.parentNode;
+
+				    // if the parents lastchild is the targetElement...
+				    if (parent.lastChild == targetElement) {
+				        // add the newElement after the target element.
+				        parent.appendChild(newElement);
+				    } else {
+				        // else the target has siblings, insert the new element between the target and it's next sibling.
+				        parent.insertBefore(newElement, targetElement.nextSibling);
+				    }
+				};
+
+				insertAfter(button, container.parentElement);
+
+				button.addEventListener ("click", function(e) {
+					e.preventDefault();
+			  		alert('todo add new row to bottom');
+				});
+			}			
 		}
 		
 	/*	--------------------------------------------------

@@ -1,0 +1,55 @@
+- var pagetitle = "Tenant User List"
+- var pagedesc = "Tenant User List"
+- var pagename = "tenant-user-list"
+- var folder = ""
+
+include /includes/header
+
+<!--  ====================  -->
+<!--  === Main content ===  -->
+<!--  ====================  -->
+main( role="main" )
+	.container
+		.row
+			h2.page-header #{pagename}
+
+			a.pull-right(href='tenant-user-new.html?clinicid=1') Add User
+
+			table.table.table-striped
+				thead
+					tr
+						th # 
+						th Full Name
+						th Email
+						th Clinic
+						th 
+				tbody
+					tr
+						td 1 
+						td foo
+						td foo@bar.com
+						td foo clinic
+						td
+							a(href='tenant-user-edit.html?id=1') Edit
+							| 
+							a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+					tr
+						td 2 
+						td apple
+						td pine@apple.com
+						td apple clinic
+						td
+							a(href='tenant-user-edit.html?id=2') Edit
+							| 
+							a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+					tr
+						td 3
+						td Orange
+						td orange@juice.com
+						td orange clinic
+						td
+							a(href='tenant-user-edit.html?id=3') Edit
+							| 
+							a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+			
+include /includes/footer

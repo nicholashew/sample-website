@@ -1,0 +1,36 @@
+- var pagetitle = "Equipment Edit"
+- var pagedesc = "Equipment Edit"
+- var pagename = "equipment-edit"
+- var folder = ""
+
+include /includes/header
+
+<!--  ====================  -->
+<!--  === Main content ===  -->
+<!--  ====================  -->
+main( role="main" )
+	.container
+		.row
+			h2.page-header #{pagename} #1
+
+			form(method='post')
+				.form-group
+					label Clinic
+					label.text-bold foo clinic
+				.form-group
+					label Modality
+					select.form-control
+						option(selected) X-Ray Scanner
+						option Y-Ray Scanner
+						option Z-Ray Scanner
+						option others
+				.form-group
+					label Name
+					input.form-control(value='Philips X-Ray Scanner')
+				.form-group
+					label Serial Number
+					input.form-control(value='P00000001')
+				.form-group
+					button.btn.btn-default(type='submit') Update
+				
+include /includes/footer

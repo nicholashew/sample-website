@@ -1,0 +1,29 @@
+- var pagetitle = "Tenant Clinic Edit"
+- var pagedesc = "Tenant Clinic Edit"
+- var pagename = "tenant-clinic-edit"
+- var folder = ""
+
+include /includes/header
+
+<!--  ====================  -->
+<!--  === Main content ===  -->
+<!--  ====================  -->
+main( role="main" )
+	.container
+		.row
+			h2.page-header #{pagename} #1
+
+			form(method='post')
+				.form-group
+					label Clinic Name
+					input.form-control(value='foo clinic')
+				.form-group
+					label Clinic User
+					select.form-control
+						option(selected) foo (foo@bar.com)
+						option apple (pine@apple.com)
+						option orange (orange@juice.com)
+				.form-group
+					button.btn.btn-default(type='submit') Update
+				
+include /includes/footer

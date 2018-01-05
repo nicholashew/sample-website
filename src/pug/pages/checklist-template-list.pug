@@ -1,0 +1,43 @@
+- var pagetitle = "Checklist Template List"
+- var pagedesc = "Checklist Template List"
+- var pagename = "checklist-template-list"
+- var folder = ""
+
+include /includes/header
+
+<!--  ====================  -->
+<!--  === Main content ===  -->
+<!--  ====================  -->
+main( role="main" )
+	.container
+		.row
+			h2.page-header #{pagename}
+
+			a.pull-right(href='checklist-template-new.html') Add Template
+
+			table.table.table-striped
+				thead
+					tr
+						th # 
+						th Name
+						th Desc				
+						th 
+				tbody
+					tr
+						td 1 
+						td QC_001
+						td ...
+						td
+							a(href='checklist-template-edit.html?id=1') Edit
+							| 
+							a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+					tr
+						td 2 
+						td QC_002
+						td ...
+						td
+							a(href='checklist-template-edit.html?id=2') Edit
+							| 
+							a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+			
+include /includes/footer

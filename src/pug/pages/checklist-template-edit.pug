@@ -1,0 +1,86 @@
+- var pagetitle = "Checklist Template Edit"
+- var pagedesc = "Checklist Template Edit"
+- var pagename = "checklist-template-edit"
+- var folder = ""
+
+include /includes/header
+
+<!--  ====================  -->
+<!--  === Main content ===  -->
+<!--  ====================  -->
+main( role="main" )
+	.container
+		.row
+			h2.page-header #{pagename}
+
+			form(method='post')
+				.form-group
+					label Name
+					input.form-control
+				.form-group
+					label Desc
+					input.form-control
+				hr
+				h4 Lineitems
+				i Drag and Drop to sort order display
+				table.table.table-striped.editable-lineitems
+					thead
+						tr
+							th
+							th Name
+							th Is Label Only
+							th Level
+							th 
+					tbody
+						tr
+							td
+								i.fa.fa-arrows
+								input.sequence(type='hidden' data-order='1')
+							td
+								input.form-control(value='sample title')
+							td
+								input(type='checkbox' checked)
+							td
+								select.form-control
+									option(selected) 1
+									option 2
+									option 3
+							td
+								a.btn.btn-danger(href='#') Remove
+						tr
+							td
+								i.fa.fa-arrows
+								input.sequence(type='hidden' data-order='2')
+							td
+								input.form-control(value='1. Power Adapter')
+							td
+								input(type='checkbox')
+							td
+								select.form-control
+									option(selected) 1
+									option 2
+									option 3
+							td
+								a.btn.btn-danger(href='#') Remove
+						tr
+							td
+								i.fa.fa-arrows
+								input.sequence(type='hidden' data-order='3')
+							td
+								input.form-control(value='1.1 Wire')
+							td
+								input(type='checkbox')
+							td
+								select.form-control
+									option 1
+									option(selected) 2
+									option 3
+							td
+								a.btn.btn-danger(href='#') Remove
+
+				hr
+				.form-group
+					button.btn.btn-primary(type='submit') Create
+					a.btn.btn-default(href='tenant-list.html') Back
+
+include /includes/footer

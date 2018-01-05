@@ -1,0 +1,36 @@
+- var pagetitle = "Equipment New"
+- var pagedesc = "Equipment New"
+- var pagename = "equipment-new"
+- var folder = ""
+
+include /includes/header
+
+<!--  ====================  -->
+<!--  === Main content ===  -->
+<!--  ====================  -->
+main( role="main" )
+	.container
+		.row
+			h2.page-header #{pagename} 
+
+			form(method='post')
+				.form-group
+					label Clinic
+					label.text-bold foo clinic
+				.form-group
+					label Modality
+					select.form-control
+						option X-Ray Scanner
+						option Y-Ray Scanner
+						option Z-Ray Scanner
+						option others
+				.form-group
+					label Name
+					input.form-control
+				.form-group
+					label Serial Number
+					input.form-control
+				.form-group
+					button.btn.btn-default(type='submit') Update
+				
+include /includes/footer

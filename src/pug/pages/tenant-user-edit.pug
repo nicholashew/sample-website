@@ -1,0 +1,37 @@
+- var pagetitle = "Tenant User Edit"
+- var pagedesc = "Tenant User Edit"
+- var pagename = "tenant-user-edit"
+- var folder = ""
+
+include /includes/header
+
+<!--  ====================  -->
+<!--  === Main content ===  -->
+<!--  ====================  -->
+main( role="main" )
+	.container
+		.row
+			h2.page-header #{pagename} #1
+
+			form(method='post')
+				.form-group
+					label Clinic
+					select.form-control
+						option(selected) foo clinic
+						option apple clinic
+						option orange clinic
+				.form-group
+					label Full Name
+					input.form-control(value='foo')
+				.form-group
+					label Username
+					label foo@bar.com
+				.form-group
+					label Email
+					input.form-control(value='foo@bar.com')
+				.form-group
+					button.btn.btn-default(type='submit') Update
+					button.btn.btn-default(type='submit') Change Password
+					button.btn.btn-danger(type='submit') Delete
+				
+include /includes/footer

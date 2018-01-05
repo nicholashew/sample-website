@@ -64,6 +64,21 @@ body {
 
 
 
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+}
+.gu-hide {
+  display: none !important;
+}
+.gu-transit {
+  opacity: 0.2;
+}
+.gu-mirror {
+  opacity: 0.8;
+}
+
 @font-face {
   font-family: "FontAwesome";
   src: url("../../assets/fonts/fontawesome/fontawesome-webfont.eot?v=4.6.3");

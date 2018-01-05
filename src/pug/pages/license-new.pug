@@ -1,0 +1,34 @@
+- var pagetitle = "License New"
+- var pagedesc = "License New"
+- var pagename = "license-new"
+- var folder = ""
+
+include /includes/header
+
+<!--  ====================  -->
+<!--  === Main content ===  -->
+<!--  ====================  -->
+main( role="main" )
+	.container
+		.row
+			h2.page-header #{pagename} 
+
+			form(method='post')
+				.form-group
+					label Clinic
+					label.text-bold foo clinic
+				.form-group
+					label License
+					input.form-control
+				.form-group
+					label Email
+					select.form-control
+						option Staff001
+						option Staff002
+				.form-group
+					label Subscription Start Date
+					input(type='date')
+				.form-group
+					button.btn.btn-default(type='submit') Update
+				
+include /includes/footer

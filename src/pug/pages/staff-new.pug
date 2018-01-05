@@ -1,0 +1,58 @@
+- var pagetitle = "Staff New"
+- var pagedesc = "Staff New"
+- var pagename = "staff-new"
+- var folder = ""
+
+include /includes/header
+
+<!--  ====================  -->
+<!--  === Main content ===  -->
+<!--  ====================  -->
+main( role="main" )
+	.container
+		.row
+			h2.page-header #{pagename}
+
+			form(method='post')
+				.form-group
+					label Name
+					label.text-bold foo clinic 
+				.form-group
+					label Name
+					input.form-control(value='Staff001')
+				.form-group
+					label Email
+					input.form-control(value='staff001@aaa.com')
+				.form-group
+					button.btn.btn-default(type='submit') Update
+
+			hr
+
+			h4.page-header License List
+			a.pull-right(href='license-new.html?staffid=1') Add License
+			table.table.table-striped
+				thead
+					tr
+						th #
+						th License
+						th Expiry
+						th 
+				tbody
+					tr
+						td 1
+						td NIC888
+						td 15/05/2018
+						td 
+							a(href='license-edit.html?id=1') Edit
+							| 
+							a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+					tr
+						td 2
+						td NIC999
+						td 31/12/2020
+						td 
+							a(href='license-edit.html?id=2') Edit
+							| 
+							a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+				
+include /includes/footer

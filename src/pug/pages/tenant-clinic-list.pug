@@ -1,0 +1,47 @@
+- var pagetitle = "Tenant Clinic List"
+- var pagedesc = "Tenant Clinic List"
+- var pagename = "tenant-clinic-list"
+- var folder = ""
+
+include /includes/header
+
+<!--  ====================  -->
+<!--  === Main content ===  -->
+<!--  ====================  -->
+main( role="main" )
+	.container
+		.row
+			h2.page-header #{pagename}
+
+			a.pull-right(href='tenant-clinic-new.html?tenantid=1') Add Clinic
+
+			table.table.table-striped
+				thead
+					tr
+						th # 
+						th Clinic Name
+						th 
+				tbody
+					tr
+						td 1 
+						td foo clinic
+						td
+							a(href='tenant-clinic-edit.html?id=1') Edit
+							| 
+							a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+					tr
+						td 2 
+						td apple clinic
+						td
+							a(href='tenant-clinic-edit.html?id=2') Edit
+							| 
+							a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+					tr
+						td 3
+						td orange clinic
+						td
+							a(href='tenant-clinic-edit.html?id=3') Edit
+							| 
+							a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+			
+include /includes/footer

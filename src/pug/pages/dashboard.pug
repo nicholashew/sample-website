@@ -1,0 +1,132 @@
+- var pagetitle = "Dashboard"
+- var pagedesc = "Dashboard"
+- var pagename = "dashboard"
+- var folder = ""
+
+include /includes/header
+
+<!--  ====================  -->
+<!--  === Main content ===  -->
+<!--  ====================  -->
+main( role="main" )
+	.container
+		.row
+			h2.page-header #{pagename}
+
+			.panel-group
+				.panel.panel-default
+					.panel-heading Visible by Tenant admin
+					.panel-body
+						.pull-right
+							label Clinic: 				
+							select.form-control
+								option.selected foo clinic
+								option apple clinic
+								option orange clinic
+
+			ul.nav.nav-tabs
+				li.active
+					a(data-toggle='tab', href='#checklist') Checklist
+				li
+					a(data-toggle='tab', href='#equipments') Equipment
+				li
+					a(data-toggle='tab', href='#staff') Staff
+				li
+					a(data-toggle='tab', href='#license') Licenses			
+
+			.tab-content
+				#checklist.tab-pane.fade.in.active
+				h3 Checklist
+				p Some content...this tab will be complex?
+
+				#equipments.tab-pane.fade
+				h3 Equipment
+				a.pull-right(href='equipment-new.html?clinicid=1') Add Equipment
+				table.table.table-striped
+					thead
+						tr
+							th #
+							th Name
+							th Serial Number
+							th Modality
+							th 
+					tbody
+						tr
+							td 1
+							td Philips X-Ray Scanner
+							td P00000001
+							td X-Ray Scanner
+							td 
+								a(href='equipment-edit.html?id=1') Edit
+								| 
+								a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+						tr
+							td 2
+							td Philips Y-Ray Scanner
+							td P00000099
+							td Y-Ray Scanner
+							td 
+								a(href='equipment-edit.html?id=1') Edit
+								| 
+								a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+
+				#staff.tab-pane.fade
+				h3 Staff
+				a.pull-right(href='staff-new.html') Add Staff
+				table.table.table-striped
+					thead
+						tr
+							th #
+							th Name
+							th Email
+							th 
+					tbody
+						tr
+							td 1
+							td Staff001
+							td staff001@aaa.com
+							td 
+								a(href='staff-edit.html?id=1') Edit
+								| 
+								a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+						tr
+							td 2
+							td Staff002
+							td staff002@aaa.com
+							td 
+								a(href='staff-edit.html?id=2') Edit
+								| 
+								a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+
+				#license.tab-pane.fade
+				h3 License
+				a.pull-right(href='license-new.html?clinicid=1') Add License
+				table.table.table-striped
+					thead
+						tr
+							th #
+							th License
+							th Staff
+							th Expiry
+							th 
+					tbody
+						tr
+							td 1
+							td NIC888
+							td Staff001
+							td 15/05/2018
+							td 
+								a(href='license-edit.html?id=1') Edit
+								| 
+								a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+						tr
+							td 2
+							td NIC999
+							td Staff001
+							td 31/12/2020
+							td 
+								a(href='license-edit.html?id=2') Edit
+								| 
+								a(href='#' onclick='return confirm(\'confirm delete?\');') Delete		
+			
+include /includes/footer

@@ -1,0 +1,34 @@
+- var pagetitle = "License Edit"
+- var pagedesc = "License Edit"
+- var pagename = "license-edit"
+- var folder = ""
+
+include /includes/header
+
+<!--  ====================  -->
+<!--  === Main content ===  -->
+<!--  ====================  -->
+main( role="main" )
+	.container
+		.row
+			h2.page-header #{pagename} #1
+
+			form(method='post')
+				.form-group
+					label Clinic
+					label.text-bold foo clinic
+				.form-group
+					label License
+					input.form-control(value='NIC888')
+				.form-group
+					label Email
+					select.form-control
+						option(selected) Staff001
+						option Staff002
+				.form-group
+					label Subscription Start Date
+					input(type='date' value='15/05/2018')
+				.form-group
+					button.btn.btn-default(type='submit') Update
+				
+include /includes/footer
