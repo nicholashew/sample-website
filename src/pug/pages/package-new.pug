@@ -1,0 +1,43 @@
+- var pagetitle = "Package New "
+- var pagedesc = "Package New"
+- var pagename = "package-new"
+- var folder = ""
+
+include /includes/header
+
+<!--  ====================  -->
+<!--  === Main content ===  -->
+<!--  ====================  -->
+main( role="main" )
+	.container
+		.row
+			h4.page-header #{pagename}
+
+			form(method='post')
+				.form-group
+					label Package Name
+					input.form-control
+				.form-group
+					label Desc
+					input.form-control
+				.form-group
+					label Monthly Price
+					input.form-control
+				.form-group
+					label Limit of Clinic
+					input.form-control
+				.form-group
+					label Status
+					.radio
+						label
+							input(type='radio' name='status')
+							span Active
+					.radio
+						label
+							input(type='radio' name='status')
+							span Inactive
+				.form-group
+					button.btn.btn-primary(type='submit') Create
+					a.btn.btn-default(href='/package-list.html') Back			
+
+include /includes/footer

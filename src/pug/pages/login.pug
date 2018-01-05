@@ -1,0 +1,34 @@
+- var pagetitle = "Login"
+- var pagedesc = "Login"
+- var pagename = "login"
+- var folder = ""
+
+include /includes/header
+
+<!--  ====================  -->
+<!--  === Main content ===  -->
+<!--  ====================  -->
+main( role="main" )
+	.container
+		.row
+			h4.page-header #{pagename}
+
+			form(method='post')
+				.form-group
+					label Email
+					input.form-control
+				.form-group
+					label Password
+					input.form-control
+				.form-group
+					.checkbox
+						label
+							input(type='checkbox') 
+							Remember Me
+				.form-group
+					button.btn.btn-default(type='submit') Log in
+				.form-group
+					p
+						a(href='/forgot-password.html') Forgot your password?
+
+include /includes/footer

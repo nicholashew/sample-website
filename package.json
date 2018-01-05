@@ -1,0 +1,32 @@
+{
+  "name": "medicalqaui",
+  "version": "0.0.1",
+  "homepage": "http://vintedge.com/",
+  "author": "Vintedge UI",
+  "dependencies": {
+    "glob": "^7.1.2",
+    "grunt": "^1.0.1",
+    "load-grunt-tasks": "^3.5.2"
+  },
+  "devDependencies": {
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-stylus": "^1.2.0",
+    "grunt-contrib-uglify": "^3.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-critical": "^0.3.0",
+    "grunt-prettify": "^0.4.0",
+    "grunt-sync": "^0.6.2",
+    "grunt-tinypng": "^0.7.0"
+  },
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "description": ""
+}

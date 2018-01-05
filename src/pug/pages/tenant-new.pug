@@ -1,0 +1,61 @@
+- var pagetitle = "Tenant New "
+- var pagedesc = "Tenant New"
+- var pagename = "tenant-new"
+- var folder = ""
+
+include /includes/header
+
+<!--  ====================  -->
+<!--  === Main content ===  -->
+<!--  ====================  -->
+main( role="main" )
+	.container
+		.row
+			h4.page-header #{pagename}
+
+			form(method='post')
+				.form-group
+					label Company Name
+					input.form-control
+				.form-group
+					label Company Registration Code
+					input.form-control
+				.form-group
+					label Full Name
+					input.form-control
+				.form-group
+					label Email
+					input.form-control
+				.form-group
+					label Subscription Tier
+					.radio
+						label
+							input(type='radio' name='tier')
+							span Free Trial
+					.radio
+						label
+							input(type='radio' name='tier')
+							span Individual
+					.radio
+						label
+							input(type='radio' name='tier')
+							span Small Chain
+					.radio
+						label
+							input(type='radio' name='tier')
+							span Medium Chain
+					.radio
+						label
+							input(type='radio' name='tier')
+							span Large Chain
+				.form-group
+					label Subscription Start Date
+					input(type='date')
+				.form-group
+					label Subscription End Date
+					input(type='date')
+				.form-group
+					button.btn.btn-primary(type='submit') Create
+					a.btn.btn-default(href='/tenant-list.html') Back
+
+include /includes/footer

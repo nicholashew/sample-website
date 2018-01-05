@@ -1,0 +1,47 @@
+- var pagetitle = "Package Edit"
+- var pagedesc = "Package Edit"
+- var pagename = "package-edit"
+- var folder = ""
+
+include /includes/header
+
+<!--  ====================  -->
+<!--  === Main content ===  -->
+<!--  ====================  -->
+main( role="main" )
+	.container
+		.row
+			h4.page-header #{pagename} #2
+
+			form(method='post')
+				.form-group
+					label Total Subscriber
+					label.text-info 50
+				.form-group
+					label Package Name
+					input.form-control(value='Individual')
+				.form-group
+					label Desc
+					input.form-control(value='...')
+				.form-group
+					label Monthly Price
+					input.form-control(value='99.99')
+				.form-group
+					label Limit of Clinic
+					input.form-control(value='1')
+				.form-group
+					label Status
+					.radio
+						label
+							input(type='radio' name='status' checked)
+							span Active
+					.radio
+						label
+							input(type='radio' name='status')
+							span Inactive				
+				.form-group
+					button.btn.btn-primary(type='submit') Update
+					button.btn.btn-danger(type='submit' onclick='return confirm(\'confirm delete?\');') Delete
+					a.btn.btn-default(href='/package-list.html') Back			
+
+include /includes/footer

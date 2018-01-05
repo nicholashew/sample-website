@@ -1,0 +1,85 @@
+- var pagetitle = "Package List"
+- var pagedesc = "Package List"
+- var pagename = "package-list"
+- var folder = ""
+
+include /includes/header
+
+<!--  ====================  -->
+<!--  === Main content ===  -->
+<!--  ====================  -->
+main( role="main" )
+	.container
+		.row
+			h4.page-header #{pagename}
+
+			a.pull-right(href='/package-new.html') Add Package
+
+			table.table.table-striped
+				thead
+					tr
+						th # 
+						th Package Name
+						th Desc
+						th Monthly Price
+						th Limit of Clinic
+						th Status
+						th 
+				tbody
+					tr
+						td 1 
+						td Free Trial
+						td free trial package
+						td 0.00
+						td 1
+						td Active
+						td
+							a(href='/package-edit.html?id=1') Edit
+							| 
+							a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+					tr
+						td 2 
+						td Individual
+						td one clinic only
+						td 99.99
+						td 1
+						td Active
+						td
+							a(href='/package-edit.html?id=2') Edit
+							| 
+							a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+					tr
+						td 3
+						td Small Chain
+						td ...
+						td 250.00
+						td 10
+						td Active
+						td
+							a(href='/package-edit.html?id=3') Edit
+							| 
+							a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+					tr
+						td 4
+						td Medium Chain
+						td ...
+						td 450.00
+						td 25
+						td Active
+						td
+							a(href='/package-edit.html?id=4') Edit
+							| 
+							a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+					tr
+						td 5
+						td Large Chain
+						td ...
+						td 600.00
+						td 50
+						td Active
+						td
+							a(href='/package-edit.html?id=5') Edit
+							| 
+							a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+			
+include /includes/footer

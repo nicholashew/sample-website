@@ -1,0 +1,32 @@
+- var pagetitle = "Profile"
+- var pagedesc = "Profile"
+- var pagename = "profile"
+- var folder = ""
+
+include /includes/header
+
+<!--  ====================  -->
+<!--  === Main content ===  -->
+<!--  ====================  -->
+main( role="main" )
+	.container
+		.row
+			h4.page-header #{pagename}
+
+			form(method='post')
+				.form-group
+					label Email
+					input.form-control
+				.form-group
+					label Password
+					input.form-control
+				.form-group
+					label Others...
+					input.form-control
+				.form-group
+					label Others...
+					input.form-control
+				.form-group
+					button.btn.btn-default(type='submit') Update
+				
+include /includes/footer

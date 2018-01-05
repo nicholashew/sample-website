@@ -1,0 +1,68 @@
+- var pagetitle = "Registration Edit"
+- var pagedesc = "Registration Edit"
+- var pagename = "registration-edit"
+- var folder = ""
+
+include /includes/header
+
+<!--  ====================  -->
+<!--  === Main content ===  -->
+<!--  ====================  -->
+main( role="main" )
+	.container
+		.row
+			h4.page-header #{pagename} #1
+
+			form(method='post')
+				.form-group
+					label Status
+					label
+						.text-success Approved
+				.form-group
+					label Company Name
+					input.form-control(value='Lorem ipsourm')
+				.form-group
+					label Company Registration Code
+					input.form-control(value='999')
+				.form-group
+					label Full Name
+					input.form-control(value='helloworld')
+				.form-group
+					label Email
+					input.form-control(value='hello@world.com')
+				.form-group
+					label Subscription Tier
+					.radio
+						label
+							input(type='radio' name='tier' checked)
+							span Free Trial
+					.radio
+						label
+							input(type='radio' name='tier')
+							span Individual
+					.radio
+						label
+							input(type='radio' name='tier')
+							span Small Chain
+					.radio
+						label
+							input(type='radio' name='tier')
+							span Medium Chain
+					.radio
+						label
+							input(type='radio' name='tier')
+							span Large Chain
+				.form-group
+					label Subscription Start Date
+					input(type='date')
+				.form-group
+					label Subscription End Date
+					input(type='date')
+				.form-group
+					button.btn.btn-primary(type='submit') Update
+					button.btn.btn-danger(type='submit' onclick='return confirm(\'confirm reject?\');') Reject
+					button.btn.btn-danger(type='submit' onclick='return confirm(\'confirm approve?\');') Approve
+					button.btn.btn-danger(type='submit' onclick='return confirm(\'confirm delete?\');') Delete
+					a.btn.btn-default(href='/registration-list.html') Back			
+
+include /includes/footer

@@ -1,0 +1,79 @@
+doctype html
+
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en">
+<![endif]-->
+
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+head
+	meta( charset="utf-8" )
+	meta( http-equiv="x-ua-compatible", content="ie=edge" )
+	title #{pagetitle} | Company Name
+	meta( name="description", content=pagedesc )
+	meta( name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" )
+	
+	link( rel="apple-touch-icon", href="apple-touch-icon.png" )
+	<!-- Place favicon.ico in the root directory -->
+	
+	link( rel="stylesheet", href=folder + "assets/css/plugins.min.css" )
+	link( rel="stylesheet", href=folder + "assets/css/style.min.css" )
+	
+<body class="#{pagename}">
+
+<!--  ==============  -->
+<!--  === Header ===  -->
+<!--  ==============  -->
+header
+	nav.navbar.navbar-inverse.navbar-fixed-top
+		.container
+			.navbar-header
+				button.navbar-toggle(
+					data-toggle='collapse'
+					data-target='.navbar-collapse'
+				)
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href='/') SampleWebApp
+			.navbar-collapse.collapse
+				ul.nav.navbar-nav
+					li
+						a(href='/register.html') Register
+					li
+						a.dropdown-toggle(
+							href='#'
+							data-toggle='dropdown'
+							role='button' 
+						) Admin Management
+							span.caret
+						ul.dropdown-menu
+							li
+								a(href='/registration-list.html') Manage Registration
+							li
+								a(href='/package-list.html') Manage Package
+							li
+								a(href='/tenant-list.html') Manage Tenant
+							li
+								a(href='/subscription-list.html') Manage Subscription
+					li
+						a.dropdown-toggle(
+							href='#'
+							data-toggle='dropdown'
+							role='button' 
+						) Chain Tenant Management
+							span.caret
+						ul.dropdown-menu
+							li
+								a(href='/tenant-user-list.html') Manage User
+								a(href='/tenant-clinic-list.html') Manage Clinic
+				ul.nav.navbar-nav.navbar-right
+					li
+						a(href='/profile.html') Profile
+					li
+						a(href='/login.html') Log in
+	.container
+		.row

@@ -1,0 +1,61 @@
+- var pagetitle = "Tenant List"
+- var pagedesc = "Tenant List"
+- var pagename = "tenant-list"
+- var folder = ""
+
+include /includes/header
+
+<!--  ====================  -->
+<!--  === Main content ===  -->
+<!--  ====================  -->
+main( role="main" )
+	.container
+		.row
+			h4.page-header #{pagename}
+
+			a.pull-right(href='/tenant-new.html') Add Tenant
+
+			table.table.table-striped
+				thead
+					tr
+						th #
+						th Company Name
+						th Company Code
+						th Name
+						th Email
+						th Tier
+						th Start Date
+						th End Date
+						th Status
+						th 
+				tbody
+					tr
+						td 1 
+						td Foo
+						td 001
+						td bar
+						td foo@bar.com
+						td Individual
+						td 01/01/2018
+						td 31/12/2020
+						td Pending
+						td
+							a(href='/tenant-edit.html?id=1') Edit
+							| 
+							a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+					tr
+						td 2 
+						td Apple
+						td 002
+						td Pineapple
+						td apple@pineapple.com
+						td Free Trial
+						td 01/01/2018
+						td 31/12/2018
+						td Pending
+						td
+							a(href='/tenant-edit.html?id=2') Edit							
+							| 
+							a(href='#' onclick='return confirm(\'confirm delete?\');') Delete
+			
+include /includes/footer

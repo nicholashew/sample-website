@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Registration List | Company Name</title>
+		<meta name="description" content="Registration List">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<!-- Place favicon.ico in the root directory -->
+		<link rel="stylesheet" href="assets/css/plugins.min.css">
+		<link rel="stylesheet" href="assets/css/style.min.css">
+	</head>
+	<body class="registration-list">
+		<!--  ==============  -->
+		<!--  === Header ===  -->
+		<!--  ==============  -->
+		<header>
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">SampleWebApp</a>
+					</div>
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="/register.html">Register</a></li>
+							<li><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button">Admin Management<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="/registration-list.html">Manage Registration</a></li>
+									<li><a href="/package-list.html">Manage Package</a></li>
+									<li><a href="/tenant-list.html">Manage Tenant</a></li>
+									<li><a href="/subscription-list.html">Manage Subscription</a></li>
+								</ul>
+							</li>
+							<li><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button">Chain Tenant Management<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="/tenant-user-list.html">Manage User</a><a href="/tenant-clinic-list.html">Manage Clinic</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="/profile.html">Profile</a></li>
+							<li><a href="/login.html">Log in</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="container">
+				<div class="row"></div>
+			</div>
+		</header>
+		<!--  ====================  -->
+		<!--  === Main content ===  -->
+		<!--  ====================  -->
+		<main role="main">
+			<div class="container">
+				<div class="row">
+					<h4 class="page-header">registration-list</h4>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th># </th>
+								<th>Company Name</th>
+								<th>Company Code</th>
+								<th>Name</th>
+								<th>Email</th>
+								<th>Tier</th>
+								<th>Start Date</th>
+								<th>End Date</th>
+								<th>Status</th>
+								<th> </th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1 </td>
+								<td><a href="/tenant-edit.html?id=1">Foo</a></td>
+								<td>001</td>
+								<td>bar</td>
+								<td>foo@bar.com</td>
+								<td>Individual</td>
+								<td>01/01/2018</td>
+								<td>31/12/2020</td>
+								<td>Approved</td>
+								<td><a href="/registration-edit.html?id=1">View</a></td>
+							</tr>
+							<tr>
+								<td>2 </td>
+								<td> <a href="/tenant-edit.html?id=2">Apple</a></td>
+								<td>002</td>
+								<td>Pineapple</td>
+								<td>apple@pineapple.com</td>
+								<td>Free Trial</td>
+								<td>01/01/2018</td>
+								<td>31/12/2018</td>
+								<td>Approved</td>
+								<td><a href="/registration-edit.html?id=2">View</a></td>
+							</tr>
+							<tr>
+								<td>3 </td>
+								<td>Orange</td>
+								<td>003</td>
+								<td>Juice</td>
+								<td>orange@juice.com</td>
+								<td>Free Trial</td>
+								<td>01/01/2018</td>
+								<td>31/12/2018</td>
+								<td>Approved</td>
+								<td><a href="/registration-edit.html?id=2">Edit							</a> <a href="#" onclick="return confirm('confirm delete?');">Delete</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</main>
+		<!--  ==============  -->
+		<!--  === Footer ===  -->
+		<!--  ==============  -->
+		<footer>
+			<div class="container">
+				<div class="row"></div>
+			</div>
+		</footer>
+		<!-- JavaScript at the bottom for fast page loading -->
+		<!-- Delete if you do not need Modernizr -->
+		<script src="assets/js/vendor/modernizr.min.js"></script>
+		<!-- Remove if you dont need to support IE8 & lower -->
+		<!--[if lte IE 8]>
+<script src="assets/js/vendor/jquery.min.js"></script>
+<script src="assets/js/vendor/respond.js"></script><![endif]-->
+		<!--[if gt IE 8]><!-->
+		<script src="assets/js/vendor/jquery.3.min.js"></script>
+		<script src="assets/js/vendor/jquery-migrate-3.js"></script>
+		<!--<![endif]-->
+		<script src="assets/js/plugins.min.js"></script>
+		<script src="assets/js/script.min.js"></script>
+	</body>
+</html>
